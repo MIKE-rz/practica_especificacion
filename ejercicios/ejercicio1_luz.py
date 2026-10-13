@@ -1,5 +1,4 @@
 '''
-Enunciado del problema:
 Una compañía eléctrica cobra el consumo mensual con tres tarifas:
 $1.00 por kWh hasta 150 kWh, $1.50 por kWh de 151 a 280 kWh y
 $3.00 por kWh arriba de 280 kWh. Se necesita calcular el importe
