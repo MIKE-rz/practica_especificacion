@@ -58,3 +58,27 @@ y si el alumno aprobó.
 # mostrarResultado(final, estado) -> None : muestra la calificación final y el estado.
 
 # Implementa el algoritmo anterior utilizando las funciones del contrato.
+
+def leerParciales():
+    # Leer las tres calificaciones parciales
+    parcial1 = float(input("Ingrese la calificación del primer parcial (0-100): "))
+    parcial2 = float(input("Ingrese la calificación del segundo parcial (0-100): "))
+    parcial3 = float(input("Ingrese la calificación del tercer parcial (0-100): "))
+    return parcial1, parcial2, parcial3
+
+def calcularFinal(parcial1, parcial2, parcial3):
+    # Calcular la calificación final
+    final = parcial1 * 0.30 + parcial2 * 0.30 + parcial3 * 0.40
+    return final
+
+def determinarEstado(final, parcial1, parcial2, parcial3):
+    # Determinar si el alumno aprobó
+    if final >= 70 and parcial1 >= 50 and parcial2 >= 50 and parcial3 >= 50:
+        return "Aprobado"
+    else:
+        return "Reprobado"
+
+def mostrarResultado(final, estado):
+    # Mostrar la calificación final y el estado
+    print(f"Calificación final: {final:.2f}")
+    print(f"Estado: {estado}")
