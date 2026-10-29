@@ -1,4 +1,7 @@
 from clases.ejemplo.calculadora import Calculadora
+from clases.ejercicios.ejercicio1_luzotro import ReciboLuz
+from clases.ejercicios.ejercicio2_calificacionotro import Calificacion
+
 
 
 class Menu(object):
@@ -8,7 +11,9 @@ class Menu(object):
     def mostrarMenu(self):
         print()
         print("Ejemplo programación Orientada a objetos")
-        print("1. Calculadora")    
+        print("1. Calculadora")
+        print("2. Recibo de luz")
+        print("3. Calificación final")    
         print("0. Salir")
 
 
@@ -23,6 +28,17 @@ class Menu(object):
                 casio.LeerNumeros()
                 casio.CalcularSuma()
                 casio.MostrarSuma()
+            elif self.opcion == "2":
+                recibo = ReciboLuz()
+                recibo.leerConsumo()
+                recibo.calcularPago()
+                recibo.mostrarRecibo()
+            elif self.opcion == "3":
+                calificacion = Calificacion()
+                calificacion.leerParciales()
+                calificacion.calcularFinal()
+                calificacion.determinarEstado()
+                calificacion.mostrarResultado()
             else:
                 print("Opción no válida, intente de nuevo.")    
                 calculadora = Calculadora()
